@@ -6,14 +6,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the project...'
-                bat 'javac Hello.java'
+                bat 'javac src/Hello.java'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Testing the project...'
-                bat 'java Hello'
+                bat 'java -cp src Hello'
             }
         }
 
